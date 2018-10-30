@@ -3,6 +3,8 @@ import {connect} from 'react-redux';
 import './single-email.css';
 
 export function SingleEmail(props) {
+    console.log(111);
+    console.log(props);
     return (
         <div className="single-email">
             <div className="single-email-headers">
@@ -17,6 +19,8 @@ export function SingleEmail(props) {
     );
 }
 
-const mapStateToProps = (state, props) => state[props.folderId].emails[props.emailId];
+
+
+ const mapStateToProps = (state, props) => state[props.match.params.folderId].emails[props.match.params.emailId];
 
 export default connect(mapStateToProps)(SingleEmail);

@@ -51,6 +51,8 @@ const initialState = {
 
 const store = createStore(state => state, initialState);
 
+const state = store.getState();
+console.log(state);
 
 ReactDOM.render(
     <Provider store={store}>
